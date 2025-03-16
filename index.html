@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sister Love - Shruti Jaiswal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BUTKI NO1</h1>
+        <h2>Dedicated to my sister, Shruti Jaiswal</h2>
+    </header>
+    
+    <main>
+        <section class="image-section">
+            <img src="shruti.jpg" alt="Shruti Jaiswal" id="sister-image">
+        </section>
+        
+        <section class="comment-section">
+            <h3>Leave a Comment</h3>
+            <textarea id="comment-box" placeholder="Write your comment here..."></textarea>
+            <button id="submit-comment">Submit</button>
+            <div id="comments-display"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Sister Love. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to create hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // Random fall duration
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove(); // Remove heart after animation
+            }, 5000); // Match with animation duration
+        }
+
+        // Generate hearts every 300ms
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
